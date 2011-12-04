@@ -38,11 +38,23 @@ To change the vendored binaries for Node.js, NPM, and SCons, use the helper scri
 
 For example, you can change the vendored version of Node.js to v0.5.8.
 
-First you'll need to build a Heroku-compatible version of Node.js:
+Before following the steps below, you'll need a Heroku build server to manage building and packaging Node for use by your custom buildpack. First, install the 'vulcan' gem
+
+	gem install vulcan
+	
+Then, from your custom buildpack directory, create a build server:
+
+	vulcan build __your_appName__
+
+Once that process is complete, you'll need to build a Heroku-compatible version of Node.js:
 
     $ export AWS_ID=xxx AWS_SECRET=yyy S3_BUCKET=zzz
     $ s3 create $S3_BUCKET
     $ support/package_node 0.5.8
+
+Then, create a package for npm:
+
+	$ support/package_npm 1.0.94
 
 Open `bin/compile` in your editor, and change the following lines:
 
