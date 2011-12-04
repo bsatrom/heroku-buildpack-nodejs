@@ -56,9 +56,10 @@ Then, create a package for npm:
 
 	$ support/package_npm 1.0.94
 
-Open `bin/compile` in your editor, and change the following lines:
+Open `bin/compile` in your editor, and change the following lines (make sure that the npm and Node versions are compatible):
 
     NODE_VERSION="0.5.8"
+	NPM_VERSION="1.0.94"
 
     S3_BUCKET=zzz
 
