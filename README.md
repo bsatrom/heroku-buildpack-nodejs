@@ -40,11 +40,11 @@ For example, you can change the vendored version of Node.js to v0.5.8.
 
 Before following the steps below, you'll need a Heroku build server to manage building and packaging Node for use by your custom buildpack. First, install the 'vulcan' gem
 
-	gem install vulcan
+	$ gem install vulcan
 	
 Then, from your custom buildpack directory, create a build server:
 
-	vulcan build yourAppName
+	$ vulcan build yourAppName
 
 Once that process is complete, you'll need to build a Heroku-compatible version of Node.js:
 
