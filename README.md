@@ -44,7 +44,7 @@ Before following the steps below, you'll need a Heroku build server to manage bu
 	
 Then, from your custom buildpack directory, create a build server:
 
-	vulcan build __your_appName__
+	vulcan build yourAppName
 
 Once that process is complete, you'll need to build a Heroku-compatible version of Node.js:
 
